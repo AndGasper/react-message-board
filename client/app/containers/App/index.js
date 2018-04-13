@@ -11,9 +11,10 @@ import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
 import { Switch, Route } from 'react-router-dom';
 
-import HomePage from 'containers/HomePage/Loadable';
-import LoginPage from 'containers/LoginPage/Loadable';
-import RegisterPage from 'containers/RegisterPage/Loadable';
+// import HomePage from 'containers/HomePage/Loadable';
+import PostsPage from 'containers/PostsPage/Loadable';
+// import LoginPage from 'containers/LoginPage/Loadable';
+// import RegisterPage from 'containers/RegisterPage/Loadable';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 
@@ -37,10 +38,10 @@ export default function App() {
       </Helmet>
       <Header />
       <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/login" component={LoginPage} />
-        <Route path="/register" component={RegisterPage} />
-        <Route path="" component={HomePage} />
+        <Route exact path="/" component={PostsPage} />
+        {/* <Route path="/login" component={LoginPage} /> */}
+        {/* <Route path="/register" component={RegisterPage} /> */}
+        <Route path="" component={PostsPage} />
       </Switch>
       <Footer />
     </AppWrapper>

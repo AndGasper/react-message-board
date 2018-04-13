@@ -7,7 +7,7 @@ import FlatButton from 'material-ui/FlatButton';
 import renderInput from 'utils/renderInput';
 import validate from './validate';
 
-const CreatePostForm = props => {
+const CreatePostForm = (props) => {
   const { handleSubmit, reset, pristine, submitting } = this.props;
   return (
     <form onSubmit={handleSubmit(submit)}>

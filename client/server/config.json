@@ -1,0 +1,6 @@
+{
+  "Api": {
+    "invokeUrl":
+      "https://bnhx68z7wk.execute-api.us-east-1.amazonaws.com/prod/posts"
+  }
+}
