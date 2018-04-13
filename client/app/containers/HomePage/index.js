@@ -20,7 +20,7 @@ import {
   makeSelectError,
 } from 'containers/App/selectors';
 import ReposList from 'components/ReposList';
-import messages from './messages';
+// import messages from './messages';
 import { loadPosts } from 'containers/App/actions';
 import reducer from 'containers/Homepage/reducer';
 import saga from 'containers/Homepage/saga';

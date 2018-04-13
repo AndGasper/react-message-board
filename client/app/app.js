@@ -16,6 +16,7 @@ import { ConnectedRouter } from 'react-router-redux';
 import FontFaceObserver from 'fontfaceobserver';
 import createHistory from 'history/createBrowserHistory';
 import 'sanitize.css/sanitize.css';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 // Import root app
 import App from 'containers/App';
@@ -36,7 +37,7 @@ import { translationMessages } from './i18n';
 
 // Import CSS reset and Global Styles
 import './global-styles';
-
+import muiTheme from './getMuiTheme';
 // Observe loading of Open Sans (to remove open sans, remove the <link> tag in
 // the index.html file and this observer)
 const openSansObserver = new FontFaceObserver('Open Sans', {});
@@ -60,11 +61,13 @@ const MOUNT_NODE = document.getElementById('app');
 const render = (messages) => {
   ReactDOM.render(
     <Provider store={store}>
-      <LanguageProvider messages={messages}>
-        <ConnectedRouter history={history}>
-          <App />
-        </ConnectedRouter>
-      </LanguageProvider>
+      <MuiThemeProvider muiTheme={muiTheme}>
+        <LanguageProvider messages={messages}>
+          <ConnectedRouter history={history}>
+            <App />
+          </ConnectedRouter>
+        </LanguageProvider>
+      </MuiThemeProvider>
     </Provider>,
     MOUNT_NODE
   );

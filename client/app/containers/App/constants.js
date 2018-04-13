@@ -1,4 +1,2 @@
-export const CREATE_POST = 'client/App/CREATE_POST';
-export const GET_POSTS = 'FETCH_POSTS';
-export const GET_POSTS_SUCCEEDED = 'FETCH_POSTS_SUCCEEDED';
-export const GET_POSTS_FAILED = 'FETCH_POSTS_FAILED';
+export const TOP_LEVEL_ACTION = 'TOP_LEVEL_ACTION';
+export const DEFAULT_LOCALE = 'en';

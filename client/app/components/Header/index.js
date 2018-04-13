@@ -7,15 +7,19 @@ import messages from './messages';
 
 class Header extends React.Component {
   // eslint-disable-line react/prefer-stateless-function
+
   render() {
+    console.log('messages inside of header', messages);
     return (
       <div>
         <NavBar>
           <HeaderLink to="/">
-            <FormattedMessage {...messages.home} />
+            {/* <FormattedMessage {...messages.home} /> */}
+            <p>Home</p>
           </HeaderLink>
           <HeaderLink to="/login">
-            <FormattedMessage {...messages.login} />
+            {/* <FormattedMessage {...messages.login} /> */}
+            <p>Login</p>
           </HeaderLink>
         </NavBar>
       </div>

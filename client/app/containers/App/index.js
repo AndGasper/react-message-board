@@ -9,6 +9,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import styled from 'styled-components';
+
 import { Switch, Route } from 'react-router-dom';
 
 // import HomePage from 'containers/HomePage/Loadable';
@@ -26,6 +27,7 @@ const AppWrapper = styled.div`
   padding: 0 16px;
   flex-direction: column;
 `;
+// More on Colors: http://www.material-ui.com/#/customization/colors
 
 export default function App() {
   return (
