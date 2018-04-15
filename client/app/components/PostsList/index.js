@@ -17,7 +17,11 @@ function PostsList({ loading, error, posts }) {
   }
 
   if (posts !== false) {
-    return <List items={posts} component={PostsListItem} />;
+    return (
+      <List>
+        <List items={posts} component={PostsListItem} />;
+      </List>
+    );
   }
 
   return null;

@@ -4,6 +4,9 @@ client/build
 client/node_modules
 client/stats.json
 
+# Don't check api credentials into source control
+client/app/config/api.json
+
 # Cruft
 ./client/.DS_Store
 ./client/npm-debug.log
