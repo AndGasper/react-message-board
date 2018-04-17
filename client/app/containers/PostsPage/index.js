@@ -8,7 +8,7 @@ import { createStructuredSelector } from 'reselect';
 
 import injectReducer from 'utils/injectReducer';
 import injectSaga from 'utils/injectSaga';
-import { Paper } from 'material-ui/Paper';
+import Paper from 'material-ui/Paper';
 import {
   makeSelectPosts,
   makeSelectLoading,
@@ -16,7 +16,7 @@ import {
 } from 'containers/PostsPage/selectors';
 import { loadPosts } from 'containers/PostsPage/actions';
 // import messages from './messages';
-import PostsList from 'components/PostsList';
+import PostsList from 'components/PostsList/index';
 
 import reducer from './reducer';
 import saga from './saga';

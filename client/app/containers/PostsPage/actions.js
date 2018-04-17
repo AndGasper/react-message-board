@@ -15,7 +15,7 @@
  *    }
  */
 
-import { GET_POSTS, GET_POSTS_SUCCESS, GET_POSTS_ERROR } from './constants';
+import { GET_POSTS, GET_POSTS_SUCCEEDED, GET_POSTS_FAILED } from './constants';
 
 /**
  * Load the postsitories, this action starts the request saga
@@ -33,11 +33,11 @@ export function loadPosts() {
  *
  * @param  {array} posts The posts data
  *
- * @return {object}      An action object with a type of GET_POSTS_SUCCESS passing the posts
+ * @return {object}      An action object with a type of GET_POSTS_SUCCEEDED passing the posts
  */
 export function postsLoaded(posts) {
   return {
-    type: GET_POSTS_SUCCESS,
+    type: GET_POSTS_SUCCEEDED,
     posts,
   };
 }
@@ -51,7 +51,7 @@ export function postsLoaded(posts) {
  */
 export function postsLoadingError(error) {
   return {
-    type: GET_POSTS_ERROR,
+    type: GET_POSTS_FAILED,
     error,
   };
 }

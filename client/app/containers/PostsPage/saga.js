@@ -7,7 +7,7 @@ import {
   all,
   takeLatest,
 } from 'redux-saga/effects';
-import Api from 'config/api.json';
+import { Api } from 'config/api.json';
 import axios from 'axios';
 import {
   GET_POSTS,
@@ -16,15 +16,23 @@ import {
 } from 'containers/PostsPage/constants';
 import { postsLoaded, postsLoadingError } from 'containers/PostsPage/actions';
 
-export function* loadPosts() {
+export function* loadPosts(action) {
   const { invokeUrl } = Api;
-  invokeUrl.path = '/posts';
+  console.log('Api', Api);
+  // invokeUrl.path = '/posts';
   const parameters = {
     Authorization: 'abc',
   };
   try {
-    const endPointPath = `${invokeUrl}${invokeUrl.path}`;
-    const posts = yield call(axios.get(endPointPath, parameters));
+    const endPointPath = `${invokeUrl}/posts`;
+    console.log('endPointPath', endPointPath);
+    console.log('parameters', parameters);
+    // Should really implement the Api.actionType style of
+    const posts = yield call(
+      axios.get(endPointPath, parameters),
+      action.payload.data
+    );
+    console.log('posts', posts);
     // const posts = [
     //   {
     //     PostId: 'SomePostId',

@@ -1,8 +1,8 @@
 import { fromJS } from 'immutable';
 import {
-  GET_POSTS_SUCCESS,
+  GET_POSTS_SUCCEEDED,
   GET_POSTS,
-  GET_POSTS_ERROR,
+  GET_POSTS_FAILED,
 } from 'containers/PostsPage/constants';
 
 const initialState = fromJS({
@@ -20,12 +20,12 @@ function postsReducer(state = initialState, action) {
         .set('loading', true)
         .set('error', false)
         .setIn(['postsData', 'posts'], false);
-    case GET_POSTS_SUCCESS:
+    case GET_POSTS_SUCCEEDED:
       return state
         .setIn(['postsData', 'posts'], action.posts)
         .set('loading', false)
         .set('error', false);
-    case GET_POSTS_ERROR:
+    case GET_POSTS_FAILED:
       return state.set('error', action.error).set('loading', false);
     default:
       return state;

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Card, CardTitle, CardText } from 'material-ui/Card';
 
-const Post = (props) => {
+const PostListItem = (props) => {
   const { title: postTitle, body: postBody } = props;
   return (
     <Card>
@@ -12,9 +12,9 @@ const Post = (props) => {
   );
 };
 
-Post.propTypes = {
+PostListItem.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
 };
 
-export default Post;
+export default PostListItem;
